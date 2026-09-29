@@ -259,8 +259,44 @@
           <!-- Will be rendered dynamically via JS API fetch or template -->
         </div>
 
+        <!-- SKELETON LOADER TEMPLATE -->
+        <template id="skeleton-card-template">
+          <div class="c-skeleton-card">
+            <div class="c-skeleton-box c-skeleton-box--img"></div>
+            <div style="padding: 24px; flex-grow: 1; display: flex; flex-direction: column;">
+              <div class="c-skeleton-box c-skeleton-box--title"></div>
+              <div class="c-skeleton-box c-skeleton-box--text"></div>
+              <div class="c-skeleton-box c-skeleton-box--text" style="width: 85%;"></div>
+              <div style="margin-top: auto; padding-top: 16px; display: flex; justify-content: space-between; align-items: center;">
+                <div class="c-skeleton-box c-skeleton-box--price"></div>
+              </div>
+            </div>
+          </div>
+        </template>
+
+        <!-- MENU CARD TEMPLATE -->
+        <template id="menu-card-template">
+          <article class="c-menu-card">
+            <div class="c-menu-card__image-wrapper">
+              <img class="c-menu-card__image" src="" alt="" width="400" height="250" loading="lazy">
+              <span class="c-tag c-tag--seasonal c-menu-card__tag" style="display: none;">季節限定</span>
+            </div>
+            <div class="c-menu-card__body">
+              <span class="c-menu-card__jp-name"></span>
+              <h3 class="c-menu-card__title"></h3>
+              <div class="c-menu-card__allergens"></div>
+              <p class="c-menu-card__desc"></p>
+              <div class="c-menu-card__footer">
+                <span class="c-menu-card__price"></span>
+                <a href="#reservation" class="c-btn c-btn--outline" style="padding: 6px 14px; font-size: 0.8rem;">予約する</a>
+              </div>
+            </div>
+          </article>
+        </template>
+
       </div>
     </section>
+
 
     <!-- 5. RESERVATION SECTION (.p-reservation) -->
     <section class="l-section l-section--alt p-reservation" id="reservation">

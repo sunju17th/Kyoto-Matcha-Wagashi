@@ -3,6 +3,8 @@ const mongoose = require('mongoose');
 const cors = require('cors');
 require('dotenv').config();
 
+const path = require('path');
+
 const menuRoutes = require('./routes/menuRoutes');
 const newsRoutes = require('./routes/newsRoutes');
 const reservationRoutes = require('./routes/reservationRoutes');
@@ -24,6 +26,9 @@ app.use(cors(corsOptions));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
+// Phục vụ trực tiếp thư mục Frontend
+app.use(express.static(path.join(__dirname, '../frontend')));
+
 // ----------------------------------------------------
 // Kết nối MongoDB Mongoose
 // ----------------------------------------------------
@@ -39,7 +44,7 @@ mongoose
 // ----------------------------------------------------
 // Routes
 // ----------------------------------------------------
-app.get('/', (req, res) => {
+app.get('/api-info', (req, res) => {
   res.status(200).json({
     success: true,
     message: 'Welcome to Komorebi Teahouse (木漏れ日) API Backend Service 🍵🍡',
@@ -52,6 +57,7 @@ app.get('/', (req, res) => {
     }
   });
 });
+
 
 app.use('/api/menu', menuRoutes);
 app.use('/api/news', newsRoutes);
