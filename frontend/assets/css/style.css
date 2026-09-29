@@ -2,6 +2,7 @@
    Komorebi Teahouse (木漏れ日) - Main Stylesheet
    Design System: Wabi-Sabi / Modern Ryokan Aesthetic
    Architecture: BEM (Block Element Modifier) + Layout (.l-), Component (.c-), Page (.p-)
+   Refactored for JIS X 8341-3 / WCAG 2.1 AA Compliance & Text Overflow Stability
    ========================================================================== */
 
 /* --------------------------------------------------------------------------
@@ -22,8 +23,9 @@
   --color-text-muted: #595959;         /* 鈍色 - Slate Muted Gray */
   --color-text-light: #8C8C8C;         /* 薄墨 - Light Gray */
 
-  --color-gold: #C5A059;               /* 金茶 - Antique Bronze Gold */
-  --color-gold-hover: #A8833E;         /* 黄金 - Darker Gold for Hover */
+  --color-gold: #C5A059;               /* 金茶 - Antique Bronze Gold (Borders, Decor) */
+  --color-gold-text: #8A6529;          /* 金茶Text - Darker Gold for Text (Contrast Ratio 4.68:1 - WCAG AA) */
+  --color-gold-hover: #70511E;         /* 黄金 - Darker Gold for Hover */
   --color-gold-light: #F7F1E5;         /* 淡金 - Subtle Gold Tint */
   
   --color-alert-red: #B83B2A;          /* 茜色 - Japanese Madder Red */
@@ -116,9 +118,9 @@ ul, ol {
   list-style: none;
 }
 
-/* Focus outline accessibility */
+/* Focus outline accessibility (JIS X 8341-3 High Contrast Focus) */
 :focus-visible {
-  outline: 2px solid var(--color-gold);
+  outline: 3px solid var(--color-matcha-dark);
   outline-offset: 3px;
 }
 
@@ -231,9 +233,9 @@ ul, ol {
 
 .c-logo__sub {
   font-size: 0.65rem;
-  color: var(--color-gold-hover);
+  color: var(--color-gold-text);
   letter-spacing: 0.15em;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 /* Navigation Component */
@@ -352,9 +354,9 @@ ul, ol {
 }
 
 .c-btn--gold {
-  background-color: var(--color-gold);
+  background-color: var(--color-gold-text);
   color: #FFFFFF;
-  border: 1px solid var(--color-gold);
+  border: 1px solid var(--color-gold-text);
 }
 
 .c-btn--gold:hover {
@@ -397,12 +399,12 @@ ul, ol {
 
 .c-tag--info {
   background-color: #E8F4F8;
-  color: #1B6B93;
+  color: #165676;
 }
 
 .c-tag--event {
   background-color: #F8EFE0;
-  color: #B87D2A;
+  color: #8A5B18;
 }
 
 .c-tag--seasonal {
@@ -426,12 +428,12 @@ ul, ol {
 .c-section-header__sub {
   font-family: var(--font-serif);
   font-size: 0.9rem;
-  color: var(--color-gold);
+  color: var(--color-gold-text);
   letter-spacing: 0.25em;
   text-transform: uppercase;
   display: block;
   margin-bottom: 8px;
-  font-weight: 600;
+  font-weight: 700;
 }
 
 .c-section-header__title {
@@ -613,10 +615,14 @@ ul, ol {
   font-weight: 500;
   color: var(--color-text-main);
   flex-grow: 1;
+  display: -webkit-box;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
 .c-news-card__arrow {
-  color: var(--color-gold);
+  color: var(--color-gold-text);
   font-size: 1.2rem;
   transition: var(--transition-fast);
 }
@@ -703,6 +709,13 @@ ul, ol {
   align-items: center;
   gap: 16px;
   margin-bottom: 16px;
+}
+
+.c-modal__date {
+  font-family: var(--font-serif);
+  font-size: 0.9rem;
+  color: var(--color-text-muted);
+  font-weight: 600;
 }
 
 .c-modal__title {
@@ -854,18 +867,24 @@ ul, ol {
 .c-menu-card__jp-name {
   font-family: var(--font-serif);
   font-size: 0.85rem;
-  color: var(--color-gold-hover);
+  color: var(--color-gold-text);
   margin-bottom: 4px;
   font-weight: 600;
 }
 
 .c-menu-card__title {
   font-family: var(--font-serif);
-  font-size: 1.25rem;
+  font-size: 1.2rem;
   color: var(--color-matcha-dark);
   font-weight: 700;
-  margin-bottom: 12px;
+  margin-bottom: 8px;
   line-height: 1.4;
+  
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  min-height: 2.8em;
 }
 
 .c-menu-card__allergens {
@@ -888,17 +907,23 @@ ul, ol {
 .c-menu-card__desc {
   font-size: 0.9rem;
   color: var(--color-text-muted);
-  line-height: 1.7;
-  margin-bottom: 20px;
-  flex-grow: 1;
+  line-height: 1.6;
+  margin-bottom: 16px;
+  
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
 }
 
+/* Ghim chân Card thẳng hàng 100% bằng margin-top: auto */
 .c-menu-card__footer {
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding-top: 16px;
   border-top: 1px dashed var(--color-border);
+  margin-top: auto;
 }
 
 .c-menu-card__price {
@@ -1031,8 +1056,8 @@ ul, ol {
 }
 
 .c-stepper__step.is-complete .c-stepper__number {
-  background-color: var(--color-gold);
-  border-color: var(--color-gold);
+  background-color: var(--color-gold-text);
+  border-color: var(--color-gold-text);
   color: #FFFFFF;
 }
 
@@ -1190,8 +1215,8 @@ ul, ol {
   box-shadow: 0 0 0 2px var(--color-matcha-dark);
 }
 
-/* Step 2 Review Layout */
-.p-reservation-review {
+/* Step 2 Review Layout (Refactored BEM) */
+.p-reservation__review {
   background-color: var(--color-bg-washi);
   border-radius: var(--radius-md);
   padding: 24px;
@@ -1199,34 +1224,34 @@ ul, ol {
   margin-bottom: 32px;
 }
 
-.p-reservation-review__row {
+.p-reservation__review-row {
   display: flex;
   justify-content: space-between;
   padding: 12px 0;
   border-bottom: 1px dashed var(--color-border);
 }
 
-.p-reservation-review__row:last-child {
+.p-reservation__review-row:last-child {
   border-bottom: none;
 }
 
-.p-reservation-review__label {
+.p-reservation__review-label {
   font-weight: 600;
   color: var(--color-text-muted);
 }
 
-.p-reservation-review__value {
+.p-reservation__review-value {
   font-weight: 700;
   color: var(--color-matcha-dark);
 }
 
-/* Step 3 Success Layout */
-.p-reservation-success {
+/* Step 3 Success Layout (Refactored BEM) */
+.p-reservation__success {
   text-align: center;
   padding: 20px 0;
 }
 
-.p-reservation-success__icon {
+.p-reservation__success-icon {
   width: 64px;
   height: 64px;
   background-color: var(--color-matcha-dark);
@@ -1239,7 +1264,7 @@ ul, ol {
   margin: 0 auto 20px;
 }
 
-.p-reservation-success__code-box {
+.p-reservation__code-box {
   background-color: var(--color-gold-light);
   border: 2px dashed var(--color-gold);
   border-radius: var(--radius-md);
@@ -1247,7 +1272,7 @@ ul, ol {
   margin: 24px 0;
 }
 
-.p-reservation-success__code {
+.p-reservation__code {
   font-family: monospace;
   font-size: 1.8rem;
   font-weight: 700;
@@ -1298,7 +1323,7 @@ ul, ol {
 .l-footer__heading {
   font-family: var(--font-serif);
   font-size: 1.1rem;
-  color: var(--color-gold);
+  color: var(--color-gold-text);
   margin-bottom: 20px;
   letter-spacing: 0.1em;
 }
@@ -1315,7 +1340,7 @@ ul, ol {
 }
 
 .l-footer__link:hover {
-  color: var(--color-gold);
+  color: var(--color-gold-light);
   padding-left: 4px;
 }
 
