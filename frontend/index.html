@@ -1,0 +1,680 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Komorebi Teahouse (木漏れ日) - Kyoto Matcha & Traditional Wagashi Teahouse. Experience Japanese Tea Ceremony in an authentic Zen ambiance.">
+  <title>Komorebi Teahouse | 木漏れ日 - 京都抹茶と伝統和菓子</title>
+  
+  <!-- Google Fonts: Noto Serif JP (Headings) & Noto Sans JP (Body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Noto+Serif+JP:wght@400;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <!-- =========================================================================
+       HEADER LAYOUT (.l-header)
+       ========================================================================= -->
+  <header class="l-header" id="header">
+    <div class="l-container l-header__inner">
+      
+      <!-- Brand Logo (.c-logo) -->
+      <a href="#" class="c-logo" aria-label="Komorebi Teahouse Homepage">
+        <div class="c-logo__mark">木</div>
+        <div class="c-logo__text-group">
+          <span class="c-logo__title">木漏れ日</span>
+          <span class="c-logo__sub">KYOTO TEAHOUSE</span>
+        </div>
+      </a>
+
+      <!-- Navigation Menu (.c-nav) -->
+      <nav class="c-nav" id="nav-menu">
+        <ul class="c-nav__list">
+          <li class="c-nav__item">
+            <a href="#news" class="c-nav__link">
+              お知らせ
+              <span class="c-nav__jp-sub">NEWS</span>
+            </a>
+          </li>
+          <li class="c-nav__item">
+            <a href="#about" class="c-nav__link">
+              こだわり
+              <span class="c-nav__jp-sub">ABOUT</span>
+            </a>
+          </li>
+          <li class="c-nav__item">
+            <a href="#menu" class="c-nav__link">
+              お品書き
+              <span class="c-nav__jp-sub">MENU</span>
+            </a>
+          </li>
+          <li class="c-nav__item">
+            <a href="#reservation" class="c-nav__link">
+              ご予約
+              <span class="c-nav__jp-sub">RESERVATION</span>
+            </a>
+          </li>
+          <li class="c-nav__item">
+            <a href="#access" class="c-nav__link">
+              店舗情報
+              <span class="c-nav__jp-sub">ACCESS</span>
+            </a>
+          </li>
+        </ul>
+
+        <!-- Reservation Quick Header CTA -->
+        <a href="#reservation" class="c-btn c-btn--gold">
+          席を予約する
+        </a>
+      </nav>
+
+      <!-- Hamburger Button for Mobile -->
+      <button type="button" class="c-hamburger" id="hamburger-toggle" aria-label="メニューを開く" aria-expanded="false" aria-controls="nav-menu">
+        <span class="c-hamburger__line"></span>
+        <span class="c-hamburger__line"></span>
+        <span class="c-hamburger__line"></span>
+      </button>
+
+    </div>
+  </header>
+
+  <!-- =========================================================================
+       MAIN CONTENT (.l-main)
+       ========================================================================= -->
+  <main class="l-main">
+
+    <!-- 1. HERO BANNER SECTION (.p-hero) -->
+    <section class="p-hero" id="hero">
+      <div class="p-hero__overlay"></div>
+      
+      <!-- Vertical Japanese Calligraphy Slogan on Hero Right -->
+      <div class="p-hero__slogan-vertical">
+        伝統の技と四季の彩りが織りなす京都の至福
+      </div>
+
+      <div class="p-hero__content">
+        <p class="p-hero__sub">KYOTO UJI MATCHA & TRADITIONAL WAGASHI</p>
+        <h1 class="p-hero__title">
+          木漏れ日の中で味わう、<br>静寂の一杯。
+        </h1>
+        <p class="p-hero__description">
+          京都宇治の厳選茶葉と、四季の移ろいを表現した伝統和菓子。<br>
+          禅の心が息づく空間で、贅沢なひとときをお過ごしください。
+        </p>
+        <div class="p-hero__actions">
+          <a href="#reservation" class="c-btn c-btn--primary">
+            ご予約はこちら (RESERVATION)
+          </a>
+        </div>
+      </div>
+
+      <!-- Scroll Indicator -->
+      <a href="#news" class="p-hero__scroll-down" aria-label="Scroll to News">
+        <span>SCROLL</span>
+        <div class="p-hero__scroll-line"></div>
+      </a>
+    </section>
+
+    <!-- 2. NEWS SECTION (.p-news) -->
+    <section class="l-section p-news" id="news">
+      <div class="l-container">
+        
+        <div class="c-section-header">
+          <span class="c-section-header__sub">INFORMATION</span>
+          <h2 class="c-section-header__title">お知らせ</h2>
+        </div>
+
+        <!-- News Item List -->
+        <div class="p-news__list" id="news-list">
+          
+          <!-- Sample Item 1 -->
+          <article class="c-news-card" data-news-id="1">
+            <time class="c-news-card__date" datetime="2026-09-25">2026.09.25</time>
+            <span class="c-tag c-tag--event">EVENT</span>
+            <h3 class="c-news-card__title">Lớp Học Pha Chế Matcha Cùng Nghệ Nhân Trà Đạo Kyoto</h3>
+            <span class="c-news-card__arrow">→</span>
+          </article>
+
+          <!-- Sample Item 2 -->
+          <article class="c-news-card" data-news-id="2">
+            <time class="c-news-card__date" datetime="2026-09-22">2026.09.22</time>
+            <span class="c-tag c-tag--seasonal">SEASONAL</span>
+            <h3 class="c-news-card__title">Thực Đơn Mùa Mới: Trà Hojicha Nướng & Bánh Yokan Hạt Dẻ</h3>
+            <span class="c-news-card__arrow">→</span>
+          </article>
+
+          <!-- Sample Item 3 -->
+          <article class="c-news-card" data-news-id="3">
+            <time class="c-news-card__date" datetime="2026-09-15">2026.09.15</time>
+            <span class="c-tag c-tag--event">EVENT</span>
+            <h3 class="c-news-card__title">Lễ Hội Trà Xuân & Ra Mắt Bộ Sản Phẩm Wagashi Sakura 2026</h3>
+            <span class="c-news-card__arrow">→</span>
+          </article>
+
+          <!-- Sample Item 4 -->
+          <article class="c-news-card" data-news-id="4">
+            <time class="c-news-card__date" datetime="2026-09-01">2026.09.01</time>
+            <span class="c-tag c-tag--info">INFO</span>
+            <h3 class="c-news-card__title">Khai Trương Trải Nghiệm Trà Đạo Kyoto Giữa Lòng Thành Phố</h3>
+            <span class="c-news-card__arrow">→</span>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- NEWS DETAIL MODAL (.c-modal) - Refactored WAI-ARIA & BEM -->
+    <div class="c-modal" id="news-modal" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="modal-news-title" aria-describedby="modal-news-content">
+      <div class="c-modal__backdrop" id="news-modal-backdrop"></div>
+      <div class="c-modal__container">
+        <button type="button" class="c-modal__close" id="news-modal-close" aria-label="閉じる (Đóng modal)">&times;</button>
+        <div class="c-modal__meta">
+          <time class="c-modal__date" id="modal-news-date">2026.09.25</time>
+          <span class="c-tag c-tag--event" id="modal-news-tag">EVENT</span>
+        </div>
+        <h3 class="c-modal__title" id="modal-news-title">Tiêu đề tin tức...</h3>
+        <p class="c-modal__body" id="modal-news-content">
+          Nội dung chi tiết tin tức sẽ được tải tại đây...
+        </p>
+      </div>
+    </div>
+
+    <!-- 3. ABOUT / CONCEPT SECTION (.p-about) -->
+    <section class="l-section l-section--alt p-about" id="about">
+      <div class="l-container">
+        <div class="c-section-header">
+          <span class="c-section-header__sub">CONCEPT & PHILOSOPHY</span>
+          <h2 class="c-section-header__title">Komorebi のこだわり</h2>
+        </div>
+
+        <div class="l-grid l-grid--2cols" style="align-items: center;">
+          <div class="p-about__image">
+            <img src="https://images.unsplash.com/photo-1544787219-7f47ccb76574?q=80&w=1000&auto=format&fit=crop" 
+                 alt="Kyoto Traditional Matcha Tea Ceremony Setup" 
+                 width="600" 
+                 height="400" 
+                 loading="lazy" 
+                 style="border-radius: var(--radius-md); box-shadow: var(--shadow-md);">
+          </div>
+          <div class="p-about__text">
+            <h3 style="font-family: var(--font-serif); font-size: 1.6rem; color: var(--color-matcha-dark); margin-bottom: 20px;">
+              侘寂 (Wabi-Sabi) — Nét đẹp thanh tịnh nơi ngón tay chạm vào tách trà
+            </h3>
+            <p style="color: var(--color-text-muted); line-height: 1.9; margin-bottom: 20px;">
+              "Komorebi" (木漏れ日) đại diện cho ánh nắng êm dịu xuyên qua kẽ lá. Tại teahouse của chúng tôi, mỗi bát trà Matcha Uji được chuẩn bị cẩn thận theo nghi thức Chado lâu đời của Kyoto, kết hợp với các viên Wagashi thủ công mang hình dáng bốn mùa.
+            </p>
+            <ul style="display: flex; flex-direction: column; gap: 12px; margin-bottom: 28px;">
+              <li style="display: flex; align-items: center; gap: 10px; font-weight: 500;">
+                <span style="color: var(--color-gold-text); font-size: 1.2rem;">✔</span> 茶葉 - Trà Matcha Uji thượng hạng tuyển chọn trực tiếp từ Kyoto.
+              </li>
+              <li style="display: flex; align-items: center; gap: 10px; font-weight: 500;">
+                <span style="color: var(--color-gold-text); font-size: 1.2rem;">✔</span> 和菓子 - Bánh ngọt thủ công nặn tay từ nguyên liệu tự nhiên.
+              </li>
+              <li style="display: flex; align-items: center; gap: 10px; font-weight: 500;">
+                <span style="color: var(--color-gold-text); font-size: 1.2rem;">✔</span> 空間 - Không gian kiến trúc gỗ Tatami mang tới sự tĩnh tại cho tâm hồn.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. MENU SECTION (.p-menu) -->
+    <section class="l-section p-menu" id="menu">
+      <div class="l-container">
+        
+        <div class="c-section-header">
+          <span class="c-section-header__sub">OUR MENU</span>
+          <h2 class="c-section-header__title">お品書き</h2>
+        </div>
+
+        <!-- Filter Tabs & Sort Dropdown -->
+        <div class="p-menu__controls">
+          <!-- Category Filter Tabs with WAI-ARIA -->
+          <div class="c-tabs" role="tablist" aria-label="Menu categories" id="category-tabs">
+            <button type="button" class="c-tabs__btn is-active" data-category="all" role="tab" aria-selected="true" aria-controls="menu-grid">すべてのメニュー (Tất cả)</button>
+            <button type="button" class="c-tabs__btn" data-category="matcha" role="tab" aria-selected="false" aria-controls="menu-grid">抹茶 (Matcha)</button>
+            <button type="button" class="c-tabs__btn" data-category="wagashi" role="tab" aria-selected="false" aria-controls="menu-grid">和菓子 (Wagashi)</button>
+            <button type="button" class="c-tabs__btn" data-category="tea-set" role="tab" aria-selected="false" aria-controls="menu-grid">茶道セット (Tea Set)</button>
+            <button type="button" class="c-tabs__btn" data-category="seasonal" role="tab" aria-selected="false" aria-controls="menu-grid">季節限定 (Seasonal)</button>
+          </div>
+
+          <!-- Sort Select -->
+          <div class="c-select-wrapper">
+            <select class="c-select" id="price-sort" aria-label="Sắp xếp theo giá">
+              <option value="">並び替え (Mặc định)</option>
+              <option value="price_asc">価格の安い順 (Giá tăng dần)</option>
+              <option value="price_desc">価格の高い順 (Giá giảm dần)</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Menu Container Grid -->
+        <div class="l-grid l-grid--3cols p-menu__grid" id="menu-grid" role="tabpanel">
+          <!-- Will be rendered dynamically via JS API fetch or template -->
+        </div>
+
+        <!-- SKELETON LOADER TEMPLATE -->
+        <template id="skeleton-card-template">
+          <div class="c-skeleton-card">
+            <div class="c-skeleton-box c-skeleton-box--img"></div>
+            <div style="padding: 24px; flex-grow: 1; display: flex; flex-direction: column;">
+              <div class="c-skeleton-box c-skeleton-box--title"></div>
+              <div class="c-skeleton-box c-skeleton-box--text"></div>
+              <div class="c-skeleton-box c-skeleton-box--text" style="width: 85%;"></div>
+              <div style="margin-top: auto; padding-top: 16px; display: flex; justify-content: space-between; align-items: center;">
+                <div class="c-skeleton-box c-skeleton-box--price"></div>
+              </div>
+            </div>
+          </div>
+        </template>
+
+        <!-- MENU CARD TEMPLATE -->
+        <template id="menu-card-template">
+          <article class="c-menu-card">
+            <div class="c-menu-card__image-wrapper">
+              <img class="c-menu-card__image" src="" alt="" width="400" height="250" loading="lazy">
+              <span class="c-tag c-tag--seasonal c-menu-card__tag" style="display: none;">季節限定</span>
+            </div>
+            <div class="c-menu-card__body">
+              <span class="c-menu-card__jp-name"></span>
+              <h3 class="c-menu-card__title"></h3>
+              <div class="c-menu-card__allergens"></div>
+              <p class="c-menu-card__desc"></p>
+              <div class="c-menu-card__footer">
+                <span class="c-menu-card__price"></span>
+                <a href="#reservation" class="c-btn c-btn--outline" style="padding: 6px 14px; font-size: 0.8rem;">予約する</a>
+              </div>
+            </div>
+          </article>
+        </template>
+
+      </div>
+    </section>
+
+
+    <!-- 5. RESERVATION SECTION (.p-reservation) -->
+    <section class="l-section l-section--alt p-reservation" id="reservation">
+      <div class="l-container">
+        
+        <div class="c-section-header">
+          <span class="c-section-header__sub">RESERVATION</span>
+          <h2 class="c-section-header__title">ご予約</h2>
+        </div>
+
+        <div class="p-reservation__card">
+          
+          <!-- Step Progress Stepper Bar -->
+          <div class="c-stepper">
+            <div class="c-stepper__step is-active" id="step-node-1">
+              <div class="c-stepper__number">1</div>
+              <span class="c-stepper__label">情報入力</span>
+            </div>
+            <div class="c-stepper__step" id="step-node-2">
+              <div class="c-stepper__number">2</div>
+              <span class="c-stepper__label">内容確認</span>
+            </div>
+            <div class="c-stepper__step" id="step-node-3">
+              <div class="c-stepper__number">3</div>
+              <span class="c-stepper__label">予約完了</span>
+            </div>
+          </div>
+
+          <!-- STEP 1: FORM INPUTS -->
+          <form id="reservation-form" class="p-reservation__form">
+            <div id="step-1-view">
+              
+              <div class="c-form-grid">
+                
+                <!-- Customer Name -->
+                <div class="c-form-group">
+                  <label for="customerName" class="c-form-label">
+                    お名前 (Họ và tên)
+                    <span class="c-form-label__required">必須</span>
+                  </label>
+                  <input type="text" id="customerName" name="customerName" class="c-form-input" placeholder="Ví dụ: Nguyễn Văn A" required>
+                </div>
+
+                <!-- Phone -->
+                <div class="c-form-group">
+                  <label for="phone" class="c-form-label">
+                    お電話番号 (Số điện thoại)
+                    <span class="c-form-label__required">必須</span>
+                  </label>
+                  <input type="tel" id="phone" name="phone" class="c-form-input" placeholder="0901234567" required>
+                </div>
+
+                <!-- Email -->
+                <div class="c-form-group">
+                  <label for="email" class="c-form-label">
+                    メールアドレス (Email)
+                    <span class="c-form-label__required">必須</span>
+                  </label>
+                  <input type="email" id="email" name="email" class="c-form-input" placeholder="example@domain.com" required>
+                </div>
+
+                <!-- Guests Count -->
+                <div class="c-form-group">
+                  <label for="guests" class="c-form-label">
+                    ご来店人数 (Số lượng khách)
+                    <span class="c-form-label__required">必須</span>
+                  </label>
+                  <select id="guests" name="guests" class="c-form-select" required>
+                    <option value="1">1 名様 (1 Người)</option>
+                    <option value="2" selected>2 名様 (2 Người)</option>
+                    <option value="3">3 名様 (3 Người)</option>
+                    <option value="4">4 名様 (4 Người)</option>
+                    <option value="5">5 名様 (5 Người)</option>
+                    <option value="6">6 名様 (6 Người)</option>
+                    <option value="7">7 名様 (7 Người)</option>
+                    <option value="8">8 名様 (8 Người)</option>
+                    <option value="9">9 名様 (9 Người)</option>
+                    <option value="10">10 名様 (10 Người)</option>
+                  </select>
+                </div>
+
+                <!-- Date Selection -->
+                <div class="c-form-group">
+                  <label for="date" class="c-form-label">
+                    ご来店日 (Ngày đặt bàn)
+                    <span class="c-form-label__required">必須</span>
+                  </label>
+                  <input type="date" id="date" name="date" class="c-form-input" required>
+                </div>
+
+                <!-- Time Slot Grid Selection -->
+                <div class="c-form-group c-form-group--full">
+                  <label class="c-form-label">
+                    ご希望の時間帯 (Khung giờ đặt)
+                    <span class="c-form-label__required">必須</span>
+                  </label>
+                  <div class="c-slot-grid" id="time-slot-container">
+                    <button type="button" class="c-slot-btn" data-slot="11:00">
+                      <span>11:00</span>
+                      <span class="c-slot-badge">Còn chỗ</span>
+                    </button>
+                    <button type="button" class="c-slot-btn" data-slot="13:00">
+                      <span>13:00</span>
+                      <span class="c-slot-badge">Còn chỗ</span>
+                    </button>
+                    <button type="button" class="c-slot-btn" data-slot="15:00">
+                      <span>15:00</span>
+                      <span class="c-slot-badge">Còn chỗ</span>
+                    </button>
+                    <button type="button" class="c-slot-btn" data-slot="17:00">
+                      <span>17:00</span>
+                      <span class="c-slot-badge">Còn chỗ</span>
+                    </button>
+                    <button type="button" class="c-slot-btn" data-slot="19:00">
+                      <span>19:00</span>
+                      <span class="c-slot-badge">Còn chỗ</span>
+                    </button>
+                  </div>
+                  <input type="hidden" id="selectedTimeSlot" name="timeSlot" required>
+                </div>
+
+                <!-- Seating Type Fieldset & Legend for W3C & A11y -->
+                <fieldset class="c-form-group c-form-group--full" style="border: none; padding: 0; margin: 0;">
+                  <legend class="c-form-label" style="margin-bottom: 8px;">
+                    お座席の種類 (Vị trí ngồi)
+                    <span class="c-form-label__required">必須</span>
+                  </legend>
+                  <div class="c-radio-group">
+                    <label class="c-radio-card">
+                      <input type="radio" name="seatingType" value="counter" class="c-radio-card__input" checked>
+                      <div class="c-radio-card__content">
+                        <div class="c-radio-card__title">Counter Bar</div>
+                        <div class="c-radio-card__jp">カウンター席</div>
+                      </div>
+                    </label>
+                    <label class="c-radio-card">
+                      <input type="radio" name="seatingType" value="table" class="c-radio-card__input">
+                      <div class="c-radio-card__content">
+                        <div class="c-radio-card__title">Table Seating</div>
+                        <div class="c-radio-card__jp">テーブル席</div>
+                      </div>
+                    </label>
+                    <label class="c-radio-card">
+                      <input type="radio" name="seatingType" value="tatami" class="c-radio-card__input">
+                      <div class="c-radio-card__content">
+                        <div class="c-radio-card__title">Tatami Room</div>
+                        <div class="c-radio-card__jp">畳個室</div>
+                      </div>
+                    </label>
+                  </div>
+                </fieldset>
+
+                <!-- Special Note -->
+                <div class="c-form-group c-form-group--full">
+                  <label for="note" class="c-form-label">
+                    ご要望・アレルギー (Ghi chú / Yêu cầu dị ứng)
+                  </label>
+                  <textarea id="note" name="note" class="c-form-textarea" rows="3" placeholder="Nhập ghi chú dị ứng thực phẩm hoặc yêu cầu đặc biệt nếu có..."></textarea>
+                </div>
+
+              </div>
+
+              <div style="text-align: center; margin-top: 32px;">
+                <button type="button" id="btn-to-step-2" class="c-btn c-btn--primary" style="width: 100%; max-width: 320px;">
+                  内容を確認する (Tiếp tục Step 2)
+                </button>
+              </div>
+
+            </div>
+
+            <!-- STEP 2: CONFIRMATION VIEW (Refactored BEM) -->
+            <div id="step-2-view" style="display: none;">
+              <h3 style="font-family: var(--font-serif); font-size: 1.3rem; color: var(--color-matcha-dark); margin-bottom: 20px; text-align: center;">
+                ご予約内容の確認 (Xác nhận thông tin đặt bàn)
+              </h3>
+              
+              <div class="p-reservation__review">
+                <div class="p-reservation__review-row">
+                  <span class="p-reservation__review-label">Họ và tên:</span>
+                  <span class="p-reservation__review-value" id="review-name">-</span>
+                </div>
+                <div class="p-reservation__review-row">
+                  <span class="p-reservation__review-label">Số điện thoại:</span>
+                  <span class="p-reservation__review-value" id="review-phone">-</span>
+                </div>
+                <div class="p-reservation__review-row">
+                  <span class="p-reservation__review-label">Email:</span>
+                  <span class="p-reservation__review-value" id="review-email">-</span>
+                </div>
+                <div class="p-reservation__review-row">
+                  <span class="p-reservation__review-label">Ngày đặt:</span>
+                  <span class="p-reservation__review-value" id="review-date">-</span>
+                </div>
+                <div class="p-reservation__review-row">
+                  <span class="p-reservation__review-label">Khung giờ:</span>
+                  <span class="p-reservation__review-value" id="review-slot">-</span>
+                </div>
+                <div class="p-reservation__review-row">
+                  <span class="p-reservation__review-label">Số người:</span>
+                  <span class="p-reservation__review-value" id="review-guests">-</span>
+                </div>
+                <div class="p-reservation__review-row">
+                  <span class="p-reservation__review-label">Vị trí ngồi:</span>
+                  <span class="p-reservation__review-value" id="review-seating">-</span>
+                </div>
+                <div class="p-reservation__review-row">
+                  <span class="p-reservation__review-label">Ghi chú:</span>
+                  <span class="p-reservation__review-value" id="review-note">-</span>
+                </div>
+              </div>
+
+              <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
+                <button type="button" id="btn-back-to-step-1" class="c-btn c-btn--outline" style="min-width: 160px;">
+                  修正する (Quay lại)
+                </button>
+                <button type="submit" id="btn-submit-reservation" class="c-btn c-btn--gold" style="min-width: 220px;">
+                  予約を確定する (Xác nhận đặt)
+                </button>
+              </div>
+            </div>
+
+            <!-- STEP 3: COMPLETE VIEW (Refactored BEM) -->
+            <div id="step-3-view" style="display: none;">
+              <div class="p-reservation__success">
+                <div class="p-reservation__success-icon">✓</div>
+                <h3 style="font-family: var(--font-serif); font-size: 1.6rem; color: var(--color-matcha-dark); margin-bottom: 8px;">
+                  ご予約が完了いたしました
+                </h3>
+                <p style="color: var(--color-text-muted);">
+                  Cảm ơn quý khách đã đặt bàn tại Komorebi Teahouse. Vui lòng lưu lại mã đặt bàn dưới đây:
+                </p>
+
+                <div class="p-reservation__code-box">
+                  <div style="font-size: 0.85rem; color: var(--color-text-muted); margin-bottom: 4px;">MÃ ĐẶT BÀN (RESERVATION CODE)</div>
+                  <div class="p-reservation__code" id="success-code">RES-YYYYMMDD-XXX</div>
+                </div>
+
+                <p style="font-size: 0.9rem; color: var(--color-text-muted); margin-bottom: 24px;">
+                  Thông tin xác nhận chi tiết đã được gửi tới email của quý khách.<br>
+                  Rất hân hạnh được đón tiếp quý khách tại Kyoto!
+                </p>
+
+                <button type="button" id="btn-reset-reservation" class="c-btn c-btn--primary">
+                  新しい予約をする (Đặt thêm lượt mới)
+                </button>
+              </div>
+            </div>
+
+          </form>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 6. ACCESS & FOOTER INFO SECTION (.p-access) -->
+    <section class="l-section p-access" id="access">
+      <div class="l-container">
+        <div class="c-section-header">
+          <span class="c-section-header__sub">SHOP INFO</span>
+          <h2 class="c-section-header__title">店舗情報</h2>
+        </div>
+
+        <div class="l-grid l-grid--2cols" style="align-items: center;">
+          <div style="background-color: var(--color-bg-washi-card); padding: 36px; border-radius: var(--radius-md); border: 1px solid var(--color-border);">
+            <h3 style="font-family: var(--font-serif); font-size: 1.4rem; color: var(--color-matcha-dark); margin-bottom: 20px;">
+              木漏れ日 (Komorebi Teahouse Kyoto)
+            </h3>
+            <div style="display: flex; flex-direction: column; gap: 14px; font-size: 0.95rem; color: var(--color-text-muted);">
+              <p>📍 <strong>住所:</strong> 〒605-0073 京都府京都市東山区祇園町南側570-12</p>
+              <p>🕒 <strong>営業時間:</strong> 11:00 - 20:00 (L.O. 19:30)</p>
+              <p>🗓️ <strong>定休日:</strong> 毎週水曜日 (Thứ Tư hàng tuần)</p>
+              <p>📞 <strong>電話番号:</strong> +81 75-555-0192</p>
+              <p>✉️ <strong>Eメール:</strong> info@komorebi-teahouse.jp</p>
+            </div>
+          </div>
+
+          <div style="border-radius: var(--radius-md); overflow: hidden; height: 320px; box-shadow: var(--shadow-sm); border: 1px solid var(--color-border);">
+            <iframe 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3268.328328192831!2d135.774!3d35.003!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMzXCsDAwJzEwLjgiTiAxMzXCsDQ2JzI2LjQiRQ!5e0!3m2!1sen!2sjp!4v1620000000000!5m2!1sen!2sjp" 
+              width="100%" 
+              height="100%" 
+              style="border:0;" 
+              allowfullscreen="" 
+              loading="lazy" 
+              title="Google Map location of Komorebi Teahouse">
+            </iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKELETON LOADER TEMPLATE (Moved outside section to main bottom) -->
+    <template id="skeleton-card-template">
+      <div class="c-skeleton-card">
+        <div class="c-skeleton-box c-skeleton-box--img"></div>
+        <div style="padding: 24px; flex-grow: 1; display: flex; flex-direction: column;">
+          <div class="c-skeleton-box c-skeleton-box--title"></div>
+          <div class="c-skeleton-box c-skeleton-box--text"></div>
+          <div class="c-skeleton-box c-skeleton-box--text" style="width: 85%;"></div>
+          <div style="margin-top: auto; padding-top: 16px; display: flex; justify-content: space-between; align-items: center;">
+            <div class="c-skeleton-box c-skeleton-box--price"></div>
+          </div>
+        </div>
+      </div>
+    </template>
+
+    <!-- MENU CARD TEMPLATE (Moved outside section to main bottom) -->
+    <template id="menu-card-template">
+      <article class="c-menu-card">
+        <div class="c-menu-card__image-wrapper">
+          <img class="c-menu-card__image" src="" alt="" width="400" height="250" loading="lazy">
+          <span class="c-tag c-tag--seasonal c-menu-card__tag" style="display: none;">季節限定</span>
+        </div>
+        <div class="c-menu-card__body">
+          <span class="c-menu-card__jp-name"></span>
+          <h3 class="c-menu-card__title"></h3>
+          <div class="c-menu-card__allergens"></div>
+          <p class="c-menu-card__desc"></p>
+          <div class="c-menu-card__footer">
+            <span class="c-menu-card__price"></span>
+            <a href="#reservation" class="c-btn c-btn--outline" style="padding: 6px 14px; font-size: 0.8rem;">予約する</a>
+          </div>
+        </div>
+      </article>
+    </template>
+
+  </main>
+
+  <!-- =========================================================================
+       FOOTER LAYOUT (.l-footer)
+       ========================================================================= -->
+  <footer class="l-footer">
+    <div class="l-container">
+      
+      <div class="l-footer__inner">
+        <!-- Brand Info -->
+        <div>
+          <h3 class="l-footer__brand-title">木漏れ日 — Komorebi Teahouse</h3>
+          <p class="l-footer__brand-desc">
+            Văn hóa Trà đạo Kyoto kết hợp tinh hoa bánh ngọt Wagashi truyền thống.<br>
+            Nơi tìm lại sự bình yên và kết nối tâm hồn qua từng chén trà Matcha Uji thanh khiết.
+          </p>
+          <div class="l-footer__info-item">📍 Kyoto Higashiyama-ku Gion-machi 570-12</div>
+          <div class="l-footer__info-item">📞 +81 75-555-0192</div>
+        </div>
+
+        <!-- Quick Links -->
+        <div>
+          <h4 class="l-footer__heading">QUICK LINKS</h4>
+          <ul class="l-footer__list">
+            <li><a href="#hero" class="l-footer__link">ホーム (Home)</a></li>
+            <li><a href="#news" class="l-footer__link">お知らせ (News)</a></li>
+            <li><a href="#about" class="l-footer__link">こだわり (About)</a></li>
+            <li><a href="#menu" class="l-footer__link">お品書き (Menu)</a></li>
+            <li><a href="#reservation" class="l-footer__link">ご予約 (Reservation)</a></li>
+          </ul>
+        </div>
+
+        <!-- Opening Hours -->
+        <div>
+          <h4 class="l-footer__heading">OPENING HOURS</h4>
+          <p style="font-size: 0.9rem; color: rgba(255, 255, 255, 0.8); line-height: 1.8;">
+            月〜日 (Mon - Sun): 11:00 - 20:00<br>
+            水曜日定休 (Wednesday Closed)<br><br>
+            Kyoto, Japan
+          </p>
+        </div>
+      </div>
+
+      <div class="l-footer__bottom">
+        <p>&copy; 2026 Komorebi Teahouse (木漏れ日). All Rights Reserved.</p>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Main ES6 JavaScript Module -->
+  <script type="module" src="assets/js/main.js"></script>
+</body>
+</html>
